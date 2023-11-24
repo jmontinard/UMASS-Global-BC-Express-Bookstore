@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Management System</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h1 class="mb-4">Book Management System</h1>
+
+    <!-- Display Books -->
+    <div class="mb-4">
+      <h2>Books</h2>
+      <ul id="bookList" class="list-group"></ul>
+    </div>
+
+    <!-- Add New Book Form -->
+    <div class="mb-4">
+      <h2>Add New Book</h2>
+      <form id="addBookForm">
+        <div class="form-group">
+          <label for="isbn">ISBN</label>
+          <input type="text" class="form-control" id="isbn" name="isbn" required>
+        </div>
+        <div class="form-group">
+          <label for="amazon_url">Amazon URL</label>
+          <input type="text" class="form-control" id="amazon_url" name="amazon_url" required>
+        </div>
+        <div class="form-group">
+          <label for="author">Author</label>
+          <input type="text" class="form-control" id="author" name="author" required>
+        </div>
+        <div class="form-group">
+          <label for="language">Language</label>
+          <input type="text" class="form-control" id="language" name="language" required>
+        </div>
+        <div class="form-group">
+          <label for="pages">Pages</label>
+          <input type="number" class="form-control" id="pages" name="pages" required>
+        </div>
+        <div class="form-group">
+          <label for="publisher">Publisher</label>
+          <input type="text" class="form-control" id="publisher" name="publisher" required>
+        </div>
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" class="form-control" id="title" name="title" required>
+        </div>
+        <div class="form-group">
+          <label for="year">Year</label>
+          <input type="number" class="form-control" id="year" name="year" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Book</button>
+      </form>
+    </div>
+
+    <!-- Update Book Form -->
+    <div class="mb-4">
+      <h2>Update Book</h2>
+      <form id="updateBookForm">
+        <div class="form-group">
+          <label for="isbnToUpdate">ISBN to Update</label>
+          <input type="text" class="form-control" id="isbnToUpdate" name="isbn" required>
+        </div>
+        <div class="form-group">
+          <label for="updatedAmazonUrl">Updated Amazon URL</label>
+          <input type="text" class="form-control" id="updatedAmazonUrl" name="amazon-url" required>
+        </div>
+        <div class="form-group">
+          <label for="updatedAuthor">Updated Author</label>
+          <input type="text" class="form-control" id="updatedAuthor" name="author" required>
+        </div>
+        <div class="form-group">
+          <label for="updatedLanguage">Updated Language</label>
+          <input type="text" class="form-control" id="updatedLanguage" name="language" required>
+        </div>
+        <div class="form-group">
+          <label for="updatedPages">Updated Pages</label>
+          <input type="number" class="form-control" id="updatedPages" name="pages" required>
+        </div>
+        <div class="form-group">
+          <label for="updatedPublisher">Updated Publisher</label>
+          <input type="text" class="form-control" id="updatedPublisher" name="publisher" required>
+        </div>
+        <div class="form-group">
+          <label for="updatedTitle">Updated Title</label>
+          <input type="text" class="form-control" id="updatedTitle" name="title" required>
+        </div>
+        <div class="form-group">
+          <label for="updatedYear">Updated Year</label>
+          <input type="number" class="form-control" id="updatedYear" name="year" required>
+        </div>
+        <button type="submit" class="btn btn-success">Update Book</button>
+      </form>
+    </div>
+
+    <!-- Delete Book Form -->
+    <div>
+      <h2>Delete Book</h2>
+      <form id="deleteBookForm">
+        <div class="form-group">
+          <label for="isbnToDelete">ISBN to Delete</label>
+          <input type="text" class="form-control" id="isbnToDelete" name="isbnToDelete" required>
+        </div>
+        <button type="submit" class="btn btn-danger">Delete Book</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="frontend.js"></script>
+</body>
+</html>
